@@ -31,20 +31,19 @@ class Name
 
 # puts Name.find_by_name('geraldine')
 
-  def self.find_by_year(year)
+  def self.find_by_rank(rank)
     data = CSV.read(@@filename, headers: true)
     result = []
-    all_years = []
-    data.each { |row| all_years << row[0]}
-    all_years.each do |y|
-      if y == year
-        result << y
+    all_ranks = []
+    data.each { |row| all_ranks << row[5]}
+    all_ranks.each do |r|
+      if r == rank
+        result << r
       next
       end
     end
     puts result
-  end
 end
-
-puts Name.find_by_year("2011")
+puts Name.find_by_rank("100")
+end
 
