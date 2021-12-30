@@ -5,7 +5,6 @@ class Student
     @name = name
     @id = id
   end
-end
 
 student_1 = Student.new('Megan', 4)
 student_2 = Student.new('Brian', 9)
@@ -24,7 +23,8 @@ modules = {
 mods_popular = []
 modules.each do |mod|
   mods_popular << mod[0] if mod[1].length > 1
-# puts mods_popular
+end
+puts mods_popular
 
 # create a hash that associate a mod with an array of student names
 students_in_mod = {}
@@ -35,5 +35,7 @@ modules.each do |mod, students|
     students_in_mod[mod] << student.name
   end
 end
-  puts students_in_mod
+puts students_in_mod
+  # puts students_in_mod
+  
 end
