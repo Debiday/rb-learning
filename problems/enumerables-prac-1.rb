@@ -24,7 +24,7 @@ mods_popular = []
 modules.each do |mod|
   mods_popular << mod[0] if mod[1].length > 1
 end
-puts mods_popular
+# puts mods_popular
 
 # create a hash that associate a mod with an array of student names
 students_in_mod = {}
@@ -35,7 +35,22 @@ modules.each do |mod, students|
     students_in_mod[mod] << student.name
   end
 end
-puts students_in_mod
-  # puts students_in_mod
-  
+# puts students_in_mod
+
+#create a hash that associates a mod with a student of the highest id
+  highest_ids = {}
+  highest = 1
+  modules.each do |mod, students|
+    highest_ids[mod] = []
+    students.each do |student|
+      if student.id > highest
+        highest = student.id
+      highest_ids[mod] = highest
+      #how to get student by ID?
+      highest = 1
+      end
+  end 
+end
+
+puts highest_ids
 end
