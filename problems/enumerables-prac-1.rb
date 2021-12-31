@@ -49,10 +49,6 @@ end
       highest = 1
       end
   end 
-
-
-
-
 end
 
 puts highest_ids
