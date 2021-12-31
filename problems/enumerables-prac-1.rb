@@ -44,12 +44,15 @@ end
     highest_ids[mod] = []
     students.each do |student|
       if student.id > highest
-        highest = student.id
-      highest_ids[mod] = highest
-      #how to get student by ID?
+        highest = student
+      highest_ids[mod] = highest.name
       highest = 1
       end
   end 
+
+
+
+
 end
 
 puts highest_ids
